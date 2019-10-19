@@ -1,4 +1,66 @@
 <?php
+/*
+Template Name: Main-Zapchasti
+*/
+?>
+<?php get_header(); ?>
+
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container">
+
+            <div class="row">
+<!--                --><?php //echo '<pre>';?>
+<!--                --><?php //print_r(wp_get_nav_menu_items('header_menu'))?>
+<!--                --><?php //echo '</pre>';?>
+                <?php
+                $menu = wp_get_nav_menu_items('header_menu');
+                foreach ($menu as $element){
+                    if($element->menu_item_parent != 0){ ;?>
+                        <div class="col-lg-4 mb-4" >
+                            <div class="flip-card text-center">
+                                <div class="flip-card-front dark" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($element->object_id)); ?>)">
+                                    <div class="flip-card-inner">
+                                        <div class="card nobg noborder text-center">
+                                            <div class="card-body">
+                                                <h3 class="card-title"><?php echo $element->title ?></h3>
+<!--                                                <p class="card-text t400">With supporting text below as a natural lead-in to additional content.</p>-->
+                                                <p class="card-text t400">
+                                                    <?php
+
+                                                    $post = get_post($element->ID);
+                                                    var_dump($post->post_content);
+                                                    $content = apply_filters('the_content', $post->post_content);
+//                                                    echo $content;
+                                                    ;?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back bg-danger no-after">
+                                    <div class="flip-card-inner">
+                                        <p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</p>
+                                        <button type="button" class="btn btn-outline-light mt-2"><a href="<?php echo $element->url; ?>">Далее</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php }
+                }
+                ;?>
+
+            </div>
+        </div>
+    </div>
+
+</section><!-- #content end -->
+
 <!-- Footer
 ============================================= -->
 <footer id="footer" class="dark">
@@ -139,7 +201,7 @@
             <div class="col_half col_last tright">
                 <div class="copyrights-menu copyright-links clearfix">
                     <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a
-                            href="#">FAQs</a>/<a href="#">Contact</a>
+                        href="#">FAQs</a>/<a href="#">Contact</a>
                 </div>
             </div>
 
@@ -149,5 +211,3 @@
 
 </footer><!-- #footer end -->
 <?php get_footer(); ?>
-
-// Silence is golden.

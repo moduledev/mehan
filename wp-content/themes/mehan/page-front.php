@@ -1,4 +1,63 @@
 <?php
+/*
+Template Name: Front-Page
+*/
+?>
+<?php get_header(); ?>
+
+<section id="slider" class="slider-element slider-parallax swiper_wrapper clearfix" style="height: 550px;"
+         data-loop="true">
+
+    <div class="swiper-container swiper-parent">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"
+                 style="background-image: url(); background-position: center top;">
+                <div class="container clearfix">
+                    <div class="slider-caption">
+                        <h2>Welcome to Canvas</h2>
+                        <p class="d-none d-sm-block">Create just what you need for your Perfect Website. Choose from a
+                            wide range of Elements &amp; simply put them on your own Canvas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container clearfix">
+                    <div class="slider-caption slider-caption-right">
+                        <h2>Beautifully Flexible</h2>
+                        <p class="d-none d-sm-block">Looks beautiful &amp; ultra-sharp on Retina Screen Displays.
+                            Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"
+                 style="background-image: url(); background-position: center bottom;">
+                <div class="container clearfix">
+                    <div class="slider-caption">
+                        <h2>Premium Constructions</h2>
+                        <p class="d-none d-sm-block">You'll be surprised to see the Final Results of your Creation &amp;
+                            would crave for more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+        <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+    </div>
+
+</section>
+
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+
+
+    </div>
+
+</section><!-- #content end -->
+
 <!-- Footer
 ============================================= -->
 <footer id="footer" class="dark">
@@ -13,7 +72,7 @@
 
                 <div class="widget clearfix">
 
-                    <img src="images/footer-widget-logo.png" alt="" class="alignleft"
+                    <img src="" alt="" class="alignleft"
                          style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
 
                     <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong>
@@ -149,5 +208,3 @@
 
 </footer><!-- #footer end -->
 <?php get_footer(); ?>
-
-// Silence is golden.

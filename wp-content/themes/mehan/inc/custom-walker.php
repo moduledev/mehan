@@ -42,14 +42,19 @@ class Walker_Nav_Primary extends Walker_Nav_Menu
         } else {
             $item_output = $args->before;
             $item_output .= '<a' . $attributes . '>';
-            $item_output .= '<div class="d-flex justify-content-between">
-                    <div class="sub-menu-thumb_img-wrapper">
-                        <img src="' . wp_get_attachment_url( get_post_thumbnail_id($item->object_id)) . '" alt="">
-                    </div>
-                    <div class=""> ' .
-                        $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after .'
-                    </div>
-                </div>';
+            $item_output .= '<div class="d-flex justify-content-between">';
+
+            if(wp_get_attachment_url( get_post_thumbnail_id($item->object_id))){
+                $item_output .=  '<div class="sub-menu-thumb_img-wrapper" style="background-image: url(' .wp_get_attachment_url( get_post_thumbnail_id($item->object_id)). ')"></div>';
+                $item_output .= '<div class=""> ' .
+                    $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after .'</div>';
+
+            } else {
+                $item_output .= '<div class=""> ' .
+                    $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after .'</div>';
+            }
+
+            $item_output .=   '</div>';
             $item_output .= '</a>';
 
             $item_output .= $args->after;
