@@ -23,29 +23,12 @@
     ============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700"
           rel="stylesheet" type="text/css"/>
-    <!--    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>-->
-    <!--    <link rel="stylesheet" href="style.css" type="text/css"/>-->
-    <!--    <link rel="stylesheet" href="css/swiper.css" type="text/css"/>-->
-
-    <!-- Construction Demo Specific Stylesheet -->
-    <!--    <link rel="stylesheet" href="demos/construction/construction.css" type="text/css"/>-->
-    <!-- / -->
-
-    <!--    <link rel="stylesheet" href="css/dark.css" type="text/css"/>-->
-    <!--    <link rel="stylesheet" href="css/font-icons.css" type="text/css"/>-->
-    <!--    <link rel="stylesheet" href="css/animate.css" type="text/css"/>-->
-    <!--    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css"/>-->
-
-    <!--    <link rel="stylesheet" href="demos/construction/css/fonts.css" type="text/css"/>-->
-
-    <!--    <link rel="stylesheet" href="css/responsive.css" type="text/css"/>-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <!--    <link rel="stylesheet" href="demos/construction/css/colors.css" type="text/css"/>-->
 
     <!-- Document Title
     ============================================= -->
-    <title>Construction | Canvas</title>
+    <title>Meхан - <?php echo single_post_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 
@@ -70,20 +53,10 @@
                         <li><a href="#" class="si-facebook"><span class="ts-icon"><i
                                             class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a>
                         </li>
-                        <li><a href="#" class="si-twitter"><span class="ts-icon"><i
-                                            class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a>
-                        </li>
-                        <li><a href="#" class="si-dribbble"><span class="ts-icon"><i
-                                            class="icon-dribbble"></i></span><span class="ts-text">Dribbble</span></a>
-                        </li>
-                        <li><a href="#" class="si-github"><span class="ts-icon"><i
-                                            class="icon-github-circled"></i></span><span
-                                        class="ts-text">Github</span></a></li>
-                        <li><a href="#" class="si-pinterest"><span class="ts-icon"><i class="icon-pinterest"></i></span><span
-                                        class="ts-text">Pinterest</span></a></li>
                         <li><a href="#" class="si-instagram"><span class="ts-icon"><i
                                             class="icon-instagram2"></i></span><span
-                                        class="ts-text">Instagram</span></a></li>
+                                        class="ts-text">Instagram</span></a>
+                        </li>
                     </ul>
                 </div><!-- #top-social end -->
 
@@ -95,15 +68,15 @@
                 ============================================= -->
                 <div class="top-links">
                     <ul>
-                        <li><a href="index.html">Locations</a>
+                        <li><a href="#">Locations</a>
                             <ul>
                                 <li><a href="#">San Francisco</a></li>
                                 <li><a href="#">London</a></li>
                                 <li><a href="#">Amsterdam</a></li>
                             </ul>
                         </li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div><!-- .top-links end -->
 
@@ -122,32 +95,34 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <a href="index.html" class="standard-logo"><img src="https://via.placeholder.com/135/FF0000/FFFFFF?Text=Down.com"
-                                                                alt="Canvas Logo"></a>
-                <a href="index.html" class="retina-logo"><img src="demos/construction/images/logo@2x.png"
-                                                              alt="Canvas Logo"></a>
+                <?php $logo = get_custom_logo();?>
+                <?php if($logo):?>
+                    <?php echo get_custom_logo(0);?>
+                <?php else:?>
+                    <a href="http://andrei/"><img src="" alt=""></a>
+                <?php endif;?>
             </div><!-- #logo end -->
 
             <ul class="header-extras">
                 <li>
                     <i class="i-plain icon-call nomargin"></i>
                     <div class="he-text">
-                        Call Us
+                        Звоните
                         <span>(91) 22 54215821</span>
                     </div>
                 </li>
                 <li>
                     <i class="i-plain icon-line2-envelope nomargin"></i>
                     <div class="he-text">
-                        Email Us
+                        Email
                         <span>info@canvas.com</span>
                     </div>
                 </li>
                 <li>
                     <i class="i-plain icon-line-clock nomargin"></i>
                     <div class="he-text">
-                        We'are Open
-                        <span>Mon - Sat, 10AM to 6PM</span>
+                        Мы открыты
+                        <span>Пн - Сб, 10:00 to 18:00</span>
                     </div>
                 </li>
             </ul>
@@ -171,78 +146,12 @@
                             'walker' => new Walker_Nav_Primary(),
                         )
                     ); ?>
-<!--                    <ul>-->
-<!--                        <li class="current"><a href="#">-->
-<!--                                <div>Home</div>-->
-<!--                            </a></li>-->
-<!--                        <li><a href="demos/construction/services.html">-->
-<!--                                <div>What we do</div>-->
-<!--                            </a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="#">-->
-<!--                                        <div>Housing Management</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="#">-->
-<!--                                        <div>Construction Planning</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="#">-->
-<!--                                        <div>Green Homes</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="#">-->
-<!--                                        <div>Architecture Design</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="#">-->
-<!--                                        <div>Interior Planning</div>-->
-<!--                                    </a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="demos/construction/about-us.html">-->
-<!--                                <div>About Us</div>-->
-<!--                            </a></li>-->
-<!--                        <li><a href="demos/construction/projects.html">-->
-<!--                                <div>Projects</div>-->
-<!--                            </a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="demos/construction/projects-2.html">-->
-<!--                                        <div>2 Columns</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="demos/construction/projects-3.html">-->
-<!--                                        <div>3 Columns</div>-->
-<!--                                    </a></li>-->
-<!--                                <li><a href="demos/construction/projects.html">-->
-<!--                                        <div>4 Columns</div>-->
-<!--                                    </a></li>-->
-<!--                                <li>-->
-<!--                                    <a href="demos/construction/projects-5.html">-->
-<!--                                        <div class="d-flex flex-row justify-content-between ">-->
-<!--                                            <div class="thumb_link_img">-->
-<!--                                                <img src="https://via.placeholder.com/35/FF0000/FFFFFF?Text=Down.com" alt="">-->
-<!--                                            </div>-->
-<!--                                            <div class="t">qweqwe qwe q eqw eqw eqw eqw eq </div>-->
-<!--                                        </div>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="demos/construction/investors.html">-->
-<!--                                <div>Investors</div>-->
-<!--                            </a></li>-->
-<!--                        <li><a href="demos/construction/blog.html">-->
-<!--                                <div>News</div>-->
-<!--                            </a></li>-->
-<!--                        <li><a href="demos/construction/careers.html">-->
-<!--                                <div>Careers</div>-->
-<!--                            </a></li>-->
-<!--                        <li><a href="demos/construction/contact.html">-->
-<!--                                <div>Contact</div>-->
-<!--                            </a></li>-->
-<!--                    </ul>-->
 
                     <!-- Top Search
                     ============================================= -->
                     <div id="top-search">
                         <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                        <form action="search.html" method="get">
+                        <form action="#" method="get">
                             <input type="text" name="q" class="form-control" value=""
                                    placeholder="Type &amp; Hit Enter..">
                         </form>
