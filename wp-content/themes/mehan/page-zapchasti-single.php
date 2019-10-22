@@ -10,7 +10,7 @@ Template Name: Main-Zapchasti-Single
 
     <div class="container clearfix">
         <h2> <?php echo single_post_title(); ?></h2>
-
+        <span><?php echo the_excerpt();?></span>
         <?php custom_breadcrumbs(); ?>
     </div>
 
@@ -35,6 +35,19 @@ Template Name: Main-Zapchasti-Single
                        <?php } ?>
                     </div>
                 <?php } ?>
+            </div>
+            <div class="row">
+                <?php echo wp_strip_all_tags( get_the_content() );?>
+
+<!--                --><?php
+//                echo '<pre>';
+//                print_r(get_attached_media( 'image', get_queried_object_id() )) ;
+//                echo '</pre>';
+
+                ?>?
+                <?php
+                echo wp_get_attachment_url(36);
+                ;?>
             </div>
         </div>
     </div>

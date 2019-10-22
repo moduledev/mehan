@@ -13,7 +13,7 @@ Template Name: Main-Zapchasti
         <span>
                              <?php
                              $page = get_post(get_queried_object_id());
-                             echo $page->post_content; ?>
+                             echo $page->post_excerpt; ?>
                         </span>
         <?php custom_breadcrumbs(); ?>
     </div>
