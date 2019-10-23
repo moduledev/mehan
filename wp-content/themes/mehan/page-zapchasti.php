@@ -6,7 +6,7 @@ Template Name: Main-Zapchasti
 <?php get_header(); ?>
 
 
-<section id="page-title" class="nobg">
+<section id="page-title" >
 
     <div class="container clearfix">
         <h2> <?php echo single_post_title(); ?></h2>

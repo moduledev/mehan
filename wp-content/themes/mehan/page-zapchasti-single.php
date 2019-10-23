@@ -6,11 +6,11 @@ Template Name: Main-Zapchasti-Single
 <?php get_header(); ?>
 
 
-<section id="page-title" class="nobg">
+<section id="page-title" >
 
     <div class="container clearfix">
         <h2> <?php echo single_post_title(); ?></h2>
-        <span><?php echo the_excerpt();?></span>
+        <span><?php echo the_excerpt(); ?></span>
         <?php custom_breadcrumbs(); ?>
     </div>
 
@@ -25,29 +25,48 @@ Template Name: Main-Zapchasti-Single
         <div class="container">
 
             <div class="row">
-               <?php
-                $images = get_children(array('post_parent' => get_queried_object_id(), 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999));
-                /* $images is now a object that contains all images (related to post id 1) and their information ordered like the gallery interface. */
-                if ($images) { ?>
-                    <div id="fade1" style="width: 100%">
-                        <?php foreach ($images as $attachment_id => $attachment) { ?>
-                                <div><img src="<?php echo wp_get_attachment_image_url($attachment_id, 'full', false); ?>" alt=""></div>
-                       <?php } ?>
-                    </div>
-                <?php } ?>
+                <!--               --><?php
+                //                $images = get_children(array('post_parent' => get_queried_object_id(), 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999));
+                //                /* $images is now a object that contains all images (related to post id 1) and their information ordered like the gallery interface. */
+                //                if ($images) { ?>
+                <!--                    <div id="fade1" style="width: 100%">-->
+                <!--                        --><?php //foreach ($images as $attachment_id => $attachment) { ?>
+                <!--                                <div><img src="-->
+                <?php //echo wp_get_attachment_image_url($attachment_id, 'full', false); ?><!--" alt=""></div>-->
+                <!--                       --><?php //} ?>
+                <!--                    </div>-->
+                <!--                --><?php //} ?>
             </div>
             <div class="row">
-                <?php echo wp_strip_all_tags( get_the_content() );?>
+                <?php echo wp_strip_all_tags(get_the_content()); ?>
+                <div id="fade1" style="width: 100%">-->
+                    <?php
+                    $images = get_attached_media('image', get_queried_object_id());
+                    foreach ($images as $image) { ?>
+                        <div><img src="<?php echo $image->guid; ?>" alt=""></div>
+                    <?php } ?>
 
+<!--                    --><?php //$loop = new WP_Query( array('post_type' => 'gallery',
+//        'posts_per_page' => 100 )
+//            );
+//        while ( $loop->have_posts() ) : $loop->the_post();
+//
+//        if ( $gallery = get_post_gallery( 24, false ) ) :
+//
+//            $img_ids = explode( ',', $gallery['ids'] );
+//            /* Loop through all the image and output them one by one */
+//            foreach( $gallery['src'] as $key => $src ) : ?>
+<!---->
+<!--                <img src="--><?php //echo $src; ?><!--" class="my-custom-class" alt="Gallery image" />-->
 <!--                --><?php
-//                echo '<pre>';
-//                print_r(get_attached_media( 'image', get_queried_object_id() )) ;
-//                echo '</pre>';
-
-                ?>?
-                <?php
-                echo wp_get_attachment_url(36);
-                ;?>
+//                    $image_post = get_post( $img_ids[ $key ] ); ?>
+<!--                    <p class="wp-caption-text">--><?php //echo $image_post->post_excerpt; ?><!--</p>-->
+<!---->
+<!--            --><?php //endforeach;
+//        endif;
+//
+// endwhile; wp_reset_postdata(); ?>
+                </div>
             </div>
         </div>
     </div>

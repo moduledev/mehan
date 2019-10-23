@@ -8,6 +8,8 @@
  */
 require get_template_directory().'/inc/custom-menu.php';
 require get_template_directory().'/inc/custom-walker.php';
+require get_template_directory().'/inc/register-widgets.php';
+require get_template_directory().'/inc/function-widgets.php';
 
 /*
 ====================================================

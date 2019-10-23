@@ -58,6 +58,7 @@
                                         class="ts-text">Instagram</span></a>
                         </li>
                     </ul>
+
                 </div><!-- #top-social end -->
 
             </div>
@@ -67,16 +68,18 @@
                 <!-- Top Links
                 ============================================= -->
                 <div class="top-links">
-                    <ul>
-                        <li><a href="#">Locations</a>
-                            <ul>
-                                <li><a href="#">San Francisco</a></li>
-                                <li><a href="#">London</a></li>
-                                <li><a href="#">Amsterdam</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul class="d-flex">
+<!--                        <li><a href="#">Locations</a>-->
+<!--                            <ul>-->
+<!--                                <li><a href="#">San Francisco</a></li>-->
+<!--                                <li><a href="#">London</a></li>-->
+<!--                                <li><a href="#">Amsterdam</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li><a href="#">FAQs</a></li>-->
+<!--                        <li><a href="#">Contact</a></li>-->
+                        <?php dynamic_sidebar('sidebar-2'); ?>
+
                     </ul>
                 </div><!-- .top-links end -->
 
@@ -95,22 +98,25 @@
             <!-- Logo
             ============================================= -->
             <div id="logo">
-                <?php $logo = get_custom_logo();?>
-                <?php if($logo):?>
-                    <?php echo get_custom_logo(0);?>
-                <?php else:?>
-                    <a href="http://andrei/"><img src="" alt=""></a>
-                <?php endif;?>
+                <?php $logo = get_custom_logo(); ?>
+                <?php if ($logo): ?>
+                    <?php
+                    $custom_logo__url = wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full'); ?>
+                    <a class="standard-logo" href="<?php echo esc_url(home_url('/')); ?>"><img
+                                src="<?php echo $custom_logo__url[0]; ?>" alt=""></a>
+                <?php else: ?>
+                    <a href="#"><img src="" alt=""></a>
+                <?php endif; ?>
             </div><!-- #logo end -->
 
             <ul class="header-extras">
-                <li>
-                    <i class="i-plain icon-call nomargin"></i>
-                    <div class="he-text">
-                        Звоните
-                        <span>(91) 22 54215821</span>
-                    </div>
-                </li>
+                <!--                <li>-->
+                <!--                    <i class="i-plain icon-call nomargin"></i>-->
+                <!--                    <div class="he-text">-->
+                <!--                        Звоните-->
+                <!--                        <span>(91) 22 54215821</span>-->
+                <!--                    </div>-->
+                <!--                </li>-->
                 <li>
                     <i class="i-plain icon-line2-envelope nomargin"></i>
                     <div class="he-text">
