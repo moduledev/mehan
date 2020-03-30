@@ -4,10 +4,10 @@ Donate link: https://yoa.st/1up
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Content analysis, Readability
-Requires at least: 4.9
-Tested up to: 5.2.4
-Stable tag: 12.3
-Requires PHP: 5.2.4
+Requires at least: 5.2
+Tested up to: 5.3.2
+Stable tag: 12.9.1
+Requires PHP: 5.6.20
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
 
@@ -209,42 +209,55 @@ Your question has most likely been answered on our knowledge base: [kb.yoast.com
 
 == Changelog ==
 
-= 12.3.0 =
-Release Date: October 15th, 2019
-
-While some of our checks are independent of languages, Yoast SEO has special skills to adapt the various content analyses to different languages from around the world. In Yoast SEO 12.3, we’re taking the first steps to add another language to the list: Hungarian. In addition, this release features a number of enhancement and fixes. Read [our 12.3 release post](https://yoa.st/release-12-3) to find out more!
-
-Enhancements:
-
-* Adds the transition word assessment for Hungarian. Props to [@9abor](https://github.com/9abor).
-* Includes the admin bar CSS in AMP dev mode. Props to [@westonruter](https://github.com/westonruter).
-* Shows a floating `Save changes` button on Yoast SEO admin pages when the normal button is not visible in the browser window.
-* Improves user input validation feedback and suggestions for error correction.
-* Introduces a new filter `wpseo_sitemap_http_headers` which allows filtering the HTTP headers we send for XML sitemaps.
-
-Other:
-
-* Removes the notification that would be thrown if add-ons with a lower version number than the plugin were installed. The `yoast_plugin_compatibility_notification` method has been deprecated.
-
-= 12.2.0 =
-Release Date: October 1st, 2019
-
-Yoast SEO 12.2 is a release full of the regular bug fixes and enhancements, but also a new addition to meta robots. Last week, Google announced a new way to give publishers more control over what the search engine can show in the results. This change, however, seems not driven by customer demand, but rather by law. Find out what this is all about and why we chose to automatically opt sites in for this in [our 12.2 release post](https://yoa.st/release-12-2)!
-
-Enhancements:
-
-* Adds default robots meta settings to opt in to all snippet display features, to prevent affected websites in Europe from having snippet display issues.
-* Adds an alert to the configuration wizard and the knowledge graph settings that is shown when organization information is missing.
+= 12.9.1 =
+Release Date: January 21st, 2020
 
 Bugfixes:
 
-* Fixes a bug where the banners in the sidebar were no longer responsive.
+* Fixes a bug where a notification would be shown that Gutenberg was outdated when the latest version of Gutenberg was already installed.
+
+= 12.9 =
+Release Date: January 21st, 2020
+
+Today, we’re releasing Yoast SEO 12.9. In this release, you’ll find a number of bug fixes and enhancements. Among other things, you’ll find a renamed snippet preview with clearer settings. Find out what else is new in [our 12.9 release post](https://yoa.st/release-12-9)!
 
 Other:
 
-* Changes all mentions of the Yoast SEO for WordPress training, which is now free.
-* Combines the 'Newsletter' and 'You might like' steps in the configuration wizard to a step called 'Continue learning'.
-* Removes the colon from the form labels at the settings pages.
+* Renames the 'Snippet preview' to 'Google preview'.
+* Replaces the Google preview mode switcher toggle with radio buttons.
+
+= 12.8.1 =
+Release Date: January 15th, 2020
+
+Bugfixes:
+
+* Fixes a bug where the Yoast SEO metabox would not be shown on custom post types and taxonomies when the settings of our plugin were never saved before.
+* Fixes a bug where the default titles for custom post types and taxonomies were not shown in the Search Appearance settings when the settings of our plugin were never saved before.
+
+= 12.8 =
+Release Date: January 7th, 2020
+
+Welcome to another year of helping you achieve your goals with your site! Today, it’s time for the first in a long line of releases planned for 2020: Yoast SEO 12.8. In this release, you’ll find a number of bug fixes and performance enhancements. Find out more about this release in [our 12.8 release post](https://yoa.st/release-12-8)!
+
+Bugfixes:
+
+* Fixes a bug where clicking the notification center buttons would result in an incorrect icon and a misplaced focus style for the dismiss and restore buttons.
+* Fixes a bug where `create` and `update` actions would be done twice on multisite environments in combination with MultilingualPress.
+* Fixes a bug where an empty page title would cause the breadcrumbs schema to set a wrong url.
+* Fixes a bug where author archives for authors without post would show up in the search results, even though the "Show archives for authors without posts in search results?" option was enabled.
+* Fixes a bug where the styling was missing from admin error notices in WordPress 5.3.
+* Fixes a bug where the results of the images alt attribute SEO assessment in the Classic Editor were incorrect when the image did not have an alt attribute but did have a title attribute.
+
+Enhancements:
+
+* Optimizes the options retrieval processes. Props to [Alex Bouma](https://alex.bouma.dev/) for his testing and suggestions.
+* Adds the possibility to declare an identifier when integrating with the Schema output.
+
+Other:
+
+* Fixes the documentation in the Schema HowTo file. Props to [timvaniersel](https://github.com/timvaniersel).
+* Fixes the documentation in the Breadcrumbs file. Props to [alfiosalanitri](https://github.com/alfiosalanitri).
+* Moves the paginated comments notice from the dashboard to WordPress' Site Health screen.
 
 = Earlier versions =
 For the changelog of earlier versions, please refer to [the changelog on yoast.com](https://yoa.st/yoast-seo-changelog).

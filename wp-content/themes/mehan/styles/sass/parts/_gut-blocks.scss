@@ -1,0 +1,19 @@
+.advantage-box {
+  padding: 10px 0 10px 0;
+
+  &__img {
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden ;
+  }
+
+  &__link {
+    @extend .advantage-box;
+    h2 {
+      color: $mehan-base-color;
+    }
+  }
+}

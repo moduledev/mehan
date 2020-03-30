@@ -1,0 +1,42 @@
+{
+  "uk": {
+    "labels": {
+      "name": "ім'я",
+      "phone": "телефон",
+      "question": "питання",
+      "message": "повідомлення",
+      "email": "e-mail",
+      "send": "відправити"
+    },
+    "errors": {
+      "empty_form": "Заповніть поля відмічені *",
+      "field": "Поле",
+      "min": "має бути довше 3-х символів",
+      "max":"не повинно перевищувати 300 символів",
+      "email": "Неправильний формат поля E-mail",
+      "phone": "не має бути довше 10 символів"
+    },
+    "success": "Повідомлення було відправлено!",
+    "empty_field": "Заповніть будь ласка заповніть поля форми"
+  },
+  "en-GB": {
+    "labels": {
+      "name": "name",
+      "phone": "phone",
+      "question": "questions",
+      "message": "message",
+      "email": "e-mail",
+      "send": "send"
+    },
+    "errors": {
+      "empty_form": "Fill all inputs",
+      "field": "Field",
+      "min": "required at least 3 symbols",
+      "max":"max length is 400 symbols",
+      "email": "Incorrect email",
+      "phone": "max length is 10 symbols"
+    },
+    "success": "Message has been delivered, we will connect with you!",
+    "empty_field": "Fill required inputs"
+  }
+}

@@ -5,3 +5,43 @@
     background-repeat: no-repeat;
     overflow: hidden;
 }
+
+.messengers_list {
+    list-style: none;
+    display: inline-block;
+    flex-direction: row;
+}
+.messengers_list li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 13px;
+}
+.messengers_list a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 13px;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.svg-icon {
+    max-width: 100%;
+    max-height: 100%;
+    fill: currentColor;
+}
+.mobile-show {
+    display: none!important;
+}
+
+
+@media (max-width: 992px) {
+    .mobile-show {
+        display: inline-block!important;
+    }
+    .pc-show {
+        display: none!important;
+    }
+
+}

@@ -2,5 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/wp-content/themes/mehan/inc/function-widgets.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wp-content/themes/mehan/languages/uk.mo" charset="UTF-8" />
   </component>
 </project>

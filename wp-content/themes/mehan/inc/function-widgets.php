@@ -11,8 +11,8 @@ class Messendgers_Icons_Widjet extends WP_Widget
     // Set up the widget name and description.
     public function __construct()
     {
-        $widget_options = array('classname' => 'Messendgers link icons', 'description' => 'Vitamins Top Header Sidebar');
-        parent::__construct('messendger_icons', 'Vitamins Top Header Sidebar', $widget_options);
+        $widget_options = array('classname' => 'Messendgers link icons', 'description' => 'Mehan messangers widjet');
+        parent::__construct('messendger_icons', 'Mehan messangers widjet', $widget_options);
     }
 
 
@@ -26,29 +26,25 @@ class Messendgers_Icons_Widjet extends WP_Widget
 
         echo $args['before_widget'] . $args['before_title'] . $args['after_title']; ?>
 
-<!--            <h4>--><?php //echo  !isset($title) ? '#' : $title ?><!--</h4>-->
 
+            <div class="messengers_list">
+                <p> <?php _e( 'Connect in one click', 'mehan' ); ?></p>
             <?php if (isset($vitamins_viber)) : ?>
-                <li class="">
                     <a class="mobile-show"  href="viber://add?number=<?php echo  !isset($vitamins_viber) ? '#' : $vitamins_viber ?>" title="viber" rel="nofollow">
                         <svg class="svg-icon">
                             <use xlink:href="<?php echo get_stylesheet_directory_uri() . '/public/svg/social-links-sprite.svg#' . 'viber' ?>">
                             </use>
                         </svg>
                     </a>
-                </li>
-               <li class="">
                    <a class="pc-show" target="_blank" href="viber://chat?number=+<?php echo  !isset($vitamins_viber) ? '#' : $vitamins_viber ?>" title="viber" rel="nofollow">
                        <svg class="svg-icon">
                            <use xlink:href="<?php echo get_stylesheet_directory_uri() . '/public/svg/social-links-sprite.svg#' . 'viber' ?>">
                            </use>
                        </svg>
                    </a>
-               </li>
             <?php endif ?>
 
             <?php if (isset($vitamins_whatsapp)) : ?>
-            <li class="">
 
                 <a target="_blank" href="https://wa.me/<?php echo  !isset($vitamins_whatsapp) ? '#' : $vitamins_whatsapp ?>"  title="whatsapp">
                     <svg class="svg-icon">
@@ -56,20 +52,17 @@ class Messendgers_Icons_Widjet extends WP_Widget
                         </use>
                     </svg>
                 </a>
-            </li>
             <?php endif ?>
 
             <?php if (isset($vitamins_telegram) && strlen($vitamins_telegram)) : ?>
-               <li class="">
                    <a href="tg://resolve?domain=<?php echo  !isset($vitamins_telegram) ? '#' : $vitamins_telegram ?>"  title="telegram">
                        <svg class="svg-icon">
                            <use xlink:href="<?php echo get_stylesheet_directory_uri() . '/public/svg/social-links-sprite.svg#' . 'telegram' ?>">
                            </use>
                        </svg>
                    </a>
-               </li>
             <?php endif ?>
-
+            </div>
         <?php echo $args['after_widget'];
     }
 

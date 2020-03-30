@@ -1,0 +1,37 @@
+.mehan-form__label {
+    text-transform: uppercase;
+}
+
+.mehan-form__input {
+    padding: 8px 14px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    border-radius: 0;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 2px solid #DDD;
+}
+
+.mehan-form__input:focus {
+    border-color: #F18052;
+    box-shadow: none;
+}
+.mehan-form__textarea {
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #DDD;
+    padding: 8px 14px;
+    font-size: 15px;
+    line-height: 1.42857143;
+
+    resize: none;
+}
+.mehan-form__textarea:focus {
+    outline: 0;
+}
+
+.error {
+    border-color: #FF4110;
+}

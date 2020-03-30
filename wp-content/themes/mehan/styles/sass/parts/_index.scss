@@ -1,0 +1,14 @@
+.mehan-front-slider {
+  .caption-wrap {
+    display: flex;
+    align-self: baseline;
+    top: 15%;
+    bottom: auto !important;
+    left: 25% !important;
+    background-color: #fff !important;
+    color: $mehan-secondary-color !important;
+      .caption {
+        padding: 20px 30px !important;
+      }
+  }
+}

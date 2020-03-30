@@ -1,9 +1,9 @@
 <?php
-function vitamins_messengers_widget_setup() {
+function mehan_messengers_widget_setup() {
     register_sidebar(array(
-        'name' => 'Vitamins Top Header Sidebar',
+        'name' => 'Top header messengers Sidebar',
         'id' => 'sidebar-2',
-        'description' => 'Vitamins Sidebar',
+        'description' => 'Top header messengers Sidebar',
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '',
@@ -11,4 +11,4 @@ function vitamins_messengers_widget_setup() {
     ));
 }
 
-add_action('widgets_init','vitamins_messengers_widget_setup');
+add_action('widgets_init','mehan_messengers_widget_setup');

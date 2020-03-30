@@ -11,9 +11,9 @@ get_header();
 ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
+        <div class="container">
+            <div class="row">
+        <?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
@@ -46,10 +46,9 @@ get_header();
 
 		endif;
 		?>
-
-		</main><!-- #main -->
+            </div>
+        </div>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

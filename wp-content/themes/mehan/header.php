@@ -32,7 +32,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="stretched">
+<body <?php body_class('stretched');?>>
 
 <!-- Document Wrapper
 ============================================= -->
@@ -68,19 +68,8 @@
                 <!-- Top Links
                 ============================================= -->
                 <div class="top-links">
-                    <ul class="d-flex">
-<!--                        <li><a href="#">Locations</a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="#">San Francisco</a></li>-->
-<!--                                <li><a href="#">London</a></li>-->
-<!--                                <li><a href="#">Amsterdam</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="#">FAQs</a></li>-->
-<!--                        <li><a href="#">Contact</a></li>-->
-                        <?php dynamic_sidebar('sidebar-2'); ?>
+                    <ul class="d-flex"><?php pll_the_languages();?></ul>
 
-                    </ul>
                 </div><!-- .top-links end -->
 
             </div>
@@ -108,26 +97,21 @@
                     <a href="#"><img src="" alt=""></a>
                 <?php endif; ?>
             </div><!-- #logo end -->
+            <?php  dynamic_sidebar( 'sidebar-2' ); ?>
 
             <ul class="header-extras">
-                <!--                <li>-->
-                <!--                    <i class="i-plain icon-call nomargin"></i>-->
-                <!--                    <div class="he-text">-->
-                <!--                        Звоните-->
-                <!--                        <span>(91) 22 54215821</span>-->
-                <!--                    </div>-->
-                <!--                </li>-->
+
                 <li>
                     <i class="i-plain icon-line2-envelope nomargin"></i>
                     <div class="he-text">
                         Email
-                        <span>info@canvas.com</span>
+                        <span><?php bloginfo('admin_email')?></span>
                     </div>
                 </li>
                 <li>
                     <i class="i-plain icon-line-clock nomargin"></i>
                     <div class="he-text">
-                        Мы открыты
+                        <?php _e( 'We are opened', 'mehan' ); ?>
                         <span>Пн - Сб, 10:00 to 18:00</span>
                     </div>
                 </li>
@@ -155,12 +139,9 @@
 
                     <!-- Top Search
                     ============================================= -->
-                    <div id="top-search">
-                        <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                        <form action="#" method="get">
-                            <input type="text" name="q" class="form-control" value=""
-                                   placeholder="Type &amp; Hit Enter..">
-                        </form>
+                    <div id="top-search"  class="header-search">
+                        <a href="#" id="top-search-trigger" class="header-search__close"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                        <?php get_search_form(); ?>
                     </div><!-- #top-search end -->
 
                 </div>
@@ -170,3 +151,4 @@
         </div>
 
     </header><!-- #header end -->
+

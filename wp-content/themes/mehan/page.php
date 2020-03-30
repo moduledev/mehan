@@ -12,28 +12,27 @@
  * @package mehan
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<?php get_template_part('template-parts/breadcrumbs', 'template');;?>
+    <section id="content">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+        <div class="content-wrap">
 
-			get_template_part( 'template-parts/content', 'page' );
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <?php if (have_posts()) : while (have_posts()) : the_post();
+                            the_content();
+                        endwhile;
+                        else: ?>
+                            <p>Sorry, no posts matched your criteria.</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    </section><!-- #content end -->
 <?php
 get_footer();

@@ -15,7 +15,10 @@ use PhpParser\NodeVisitorAbstract;
  * Class Vendor_Prefixing_Visitor
  */
 class Remove_Vendor_Prefixing_Visitor extends NodeVisitorAbstract {
+
 	/**
+	 * Removes vendor prefixes from use statements.
+	 *
 	 * @param \PhpParser\Node $node The node being visited.
 	 *
 	 * @return \PhpParser\Node The possibly modified node.
@@ -25,7 +28,7 @@ class Remove_Vendor_Prefixing_Visitor extends NodeVisitorAbstract {
 			return $node;
 		}
 
-		if ( $node->getFirst() !== YOAST_VENDOR_NS_PREFIX ) {
+		if ( $node->getFirst() !== \YOAST_VENDOR_NS_PREFIX ) {
 			return $node;
 		}
 
